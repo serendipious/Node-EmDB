@@ -1,0 +1,20 @@
+{
+  "name": "emdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "EmDB.js",
+  "dependencies": {},
+  "devDependencies": {
+    "fs-extra": "^5.0.0",
+    "short-uid": "^0.1.0"
+  },
+  "scripts": {
+    "test": "node tst/EmDB-Benchmark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/serendipious/Node-EmDB.git"
+  },
+  "author": "Ankit Kuwadekar",
+  "license": "UNLICENSED"
+}
