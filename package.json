@@ -2,7 +2,7 @@
   "name": "emdb",
   "version": "1.0.0",
   "description": "",
-  "main": "EmDB.js",
+  "main": "./src/EmDB.js",
   "dependencies": {},
   "devDependencies": {
     "fs-extra": "^5.0.0",
