@@ -1,20 +1,61 @@
 {
   "name": "emdb",
   "version": "1.0.0",
-  "description": "",
-  "main": "./src/EmDB.js",
-  "dependencies": {},
-  "devDependencies": {
-    "fs-extra": "^5.0.0",
-    "short-uid": "^0.1.0"
-  },
+  "description": "High-Performance Embedded Key-Value Store for Node.js with TypeScript support",
+  "main": "./dist/EmDB.js",
+  "types": "./dist/EmDB.d.ts",
+  "files": [
+    "dist/**/*",
+    "lib/**/*",
+    "README.md",
+    "CONTRIBUTING.md"
+  ],
   "scripts": {
-    "test": "node tst/EmDB-Benchmark"
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:coverage:report": "jest --coverage && open coverage/lcov-report/index.html",
+    "lint": "eslint src/**/*.ts lib/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts lib/**/*.ts --fix",
+    "benchmark": "npm run build && node dist/benchmark/EmDB-Benchmark.js",
+    "prepublishOnly": "npm run clean && npm run build && npm run test:coverage",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.0.0",
+    "fs-extra": "^5.0.0",
+    "husky": "^8.0.0",
+    "jest": "^29.5.0",
+    "lint-staged": "^13.0.0",
+    "rimraf": "^5.0.0",
+    "short-uid": "^0.1.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/serendipious/Node-EmDB.git"
   },
+  "keywords": [
+    "database",
+    "key-value",
+    "embedded",
+    "typescript",
+    "nodejs",
+    "storage",
+    "persistence"
+  ],
   "author": "Ankit Kuwadekar",
-  "license": "UNLICENSED"
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  }
 }

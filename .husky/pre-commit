@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run linting
+npm run lint
+
+# Run tests with coverage
+npm run test:coverage
+
+# Check if coverage meets threshold
+if [ $? -ne 0 ]; then
+  echo "❌ Tests failed or coverage below threshold"
+  exit 1
+fi
+
+echo "✅ All checks passed!"
