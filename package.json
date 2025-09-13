@@ -1,5 +1,5 @@
 {
-  "name": "@bugless/em-db",
+  "name": "embedded-db",
   "version": "0.5.0",
   "description": "High-Performance Embedded Key-Value Store for Node.js with TypeScript support",
   "main": "./dist/EmDB.js",

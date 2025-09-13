@@ -1,6 +1,6 @@
 # Em-DB
 
-[![npm version](https://badge.fury.io/js/@bugless/@bugless/em-db.svg)](https://badge.fury.io/js/@bugless/@bugless/em-db)
+[![npm version](https://badge.fury.io/js/embedded-db.svg)](https://badge.fury.io/js/embedded-db)
 [![Build Status](https://github.com/serendipious/Node-EmDB/workflows/CI/badge.svg)](https://github.com/serendipious/Node-EmDB/actions)
 [![Coverage Status](https://coveralls.io/repos/github/serendipious/Node-EmDB/badge.svg?branch=master)](https://coveralls.io/github/serendipious/Node-EmDB?branch=master)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
@@ -22,13 +22,13 @@ A high-performance, TypeScript-first embedded key-value store for Node.js with m
 ## Installation
 
 ```bash
-npm install @bugless/@bugless/em-db
+npm install embedded-db
 ```
 
 Or with Bun:
 
 ```bash
-bun add @bugless/@bugless/em-db
+bun add embedded-db
 ```
 
 ## Quick Start
