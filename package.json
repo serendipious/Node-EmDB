@@ -18,9 +18,11 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:coverage:report": "jest --coverage && open coverage/lcov-report/index.html",
+    "test:bun": "bun test",
     "lint": "eslint src/**/*.ts lib/**/*.ts",
     "lint:fix": "eslint src/**/*.ts lib/**/*.ts --fix",
     "benchmark": "npm run build && node dist/benchmark/EmDB-Benchmark.js",
+    "benchmark:bun": "bun run build && bun dist/benchmark/EmDB-Benchmark.js",
     "prepublishOnly": "npm run clean && npm run build && npm run test:coverage",
     "prepare": "husky install"
   },

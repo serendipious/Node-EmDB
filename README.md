@@ -25,6 +25,12 @@ A high-performance, TypeScript-first embedded key-value store for Node.js with m
 npm install emdb
 ```
 
+Or with Bun:
+
+```bash
+bun add emdb
+```
+
 ## Quick Start
 
 ### TypeScript/ES Modules
@@ -211,8 +217,11 @@ npm run build
 # Build in watch mode
 npm run build:watch
 
-# Run tests
+# Run tests with Jest
 npm test
+
+# Run tests with Bun
+npm run test:bun
 
 # Run tests with coverage
 npm run test:coverage
@@ -220,8 +229,11 @@ npm run test:coverage
 # Run tests in watch mode
 npm run test:watch
 
-# Run benchmark
+# Run benchmark with Node.js
 npm run benchmark
+
+# Run benchmark with Bun
+npm run benchmark:bun
 
 # Lint code
 npm run lint
