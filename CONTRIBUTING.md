@@ -258,9 +258,9 @@ Types:
 Examples:
 ```
 feat(adapters): add new Redis adapter
-fix(emdb): handle null values correctly
+fix(em-db): handle null values correctly
 docs(readme): update installation instructions
-test(emdb): add tests for error handling
+test(em-db): add tests for error handling
 ```
 
 ### Pull Request Checklist

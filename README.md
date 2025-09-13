@@ -1,6 +1,6 @@
-# Node-EmDB
+# Em-DB
 
-[![npm version](https://badge.fury.io/js/emdb.svg)](https://badge.fury.io/js/emdb)
+[![npm version](https://badge.fury.io/js/em-db.svg)](https://badge.fury.io/js/em-db)
 [![Build Status](https://github.com/serendipious/Node-EmDB/workflows/CI/badge.svg)](https://github.com/serendipious/Node-EmDB/actions)
 [![Coverage Status](https://coveralls.io/repos/github/serendipious/Node-EmDB/badge.svg?branch=master)](https://coveralls.io/github/serendipious/Node-EmDB?branch=master)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
@@ -22,13 +22,13 @@ A high-performance, TypeScript-first embedded key-value store for Node.js with m
 ## Installation
 
 ```bash
-npm install emdb
+npm install em-db
 ```
 
 Or with Bun:
 
 ```bash
-bun add emdb
+bun add em-db
 ```
 
 ## Quick Start
@@ -36,8 +36,8 @@ bun add emdb
 ### TypeScript/ES Modules
 
 ```typescript
-import { EmDB } from 'emdb';
-import { JSONAdapter } from 'emdb/adapters/JSON-Adapter';
+import { EmDB } from 'em-db';
+import { JSONAdapter } from 'em-db/adapters/JSON-Adapter';
 
 // Create database with default settings
 const db = new EmDB('./data.db');
@@ -61,8 +61,8 @@ db.close(); // Stop auto-sync and final sync
 ### CommonJS
 
 ```javascript
-const { EmDB } = require('emdb');
-const { CompressedJSONAdapter } = require('emdb/adapters/CompressedJSON-Adapter');
+const { EmDB } = require('em-db');
+const { CompressedJSONAdapter } = require('em-db/adapters/CompressedJSON-Adapter');
 
 const db = new EmDB('./data.db', {
   adapter: CompressedJSONAdapter,
@@ -84,7 +84,7 @@ Node-EmDB supports multiple storage adapters for different use cases:
 - **Cons**: No compression, slower for large datasets
 
 ```typescript
-import { JSONAdapter } from 'emdb/adapters/JSON-Adapter';
+import { JSONAdapter } from 'em-db/adapters/JSON-Adapter';
 
 const db = new EmDB('./data.json', { adapter: JSONAdapter });
 ```
@@ -96,7 +96,7 @@ const db = new EmDB('./data.json', { adapter: JSONAdapter });
 - **Cons**: Not human-readable
 
 ```typescript
-import { CompressedJSONAdapter } from 'emdb/adapters/CompressedJSON-Adapter';
+import { CompressedJSONAdapter } from 'em-db/adapters/CompressedJSON-Adapter';
 
 const db = new EmDB('./data.db', { adapter: CompressedJSONAdapter });
 ```
@@ -108,7 +108,7 @@ const db = new EmDB('./data.db', { adapter: CompressedJSONAdapter });
 - **Cons**: Many small files, slower for many keys
 
 ```typescript
-import { FileAdapter } from 'emdb/adapters/File-Adapter';
+import { FileAdapter } from 'em-db/adapters/File-Adapter';
 
 const db = new EmDB('./data-dir', { adapter: FileAdapter });
 ```
@@ -120,7 +120,7 @@ const db = new EmDB('./data-dir', { adapter: FileAdapter });
 - **Cons**: Many files, not human-readable
 
 ```typescript
-import { CompressedFileAdapter } from 'emdb/adapters/CompressedFile-Adapter';
+import { CompressedFileAdapter } from 'em-db/adapters/CompressedFile-Adapter';
 
 const db = new EmDB('./data-dir', { adapter: CompressedFileAdapter });
 ```
